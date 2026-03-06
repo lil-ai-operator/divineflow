@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DivineFlow - Spiritual Products & Healing Downloads</title>
+    <title>DivineFlow - Spiritual Products & Healing</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="icon" type="image/png" href="divineflow-logo-1.png">
 </head>
 <body>
     <!-- Floating Healing Orbs -->
@@ -20,17 +20,22 @@
         <div class="orb orb-5"></div>
     </div>
 
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+    </button>
+
     <header class="header">
         <nav class="nav">
             <a href="index.html" class="logo">
-                <img src="logo.svg" alt="DivineFlow" class="logo-img">
+                <img src="divineflow-logo-1.png" alt="DivineFlow" class="logo-img">
                 <span class="logo-text">DivineFlow</span>
             </a>
             <ul class="nav-links">
                 <li><a href="products.html">Products</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="cart.html" class="nav-cart">🛒 Cart</a></li>
+                <li><a href="cart.html" class="nav-cart">🛒</a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
         </nav>
@@ -45,30 +50,29 @@
     <section class="hero hero-home">
         <div class="hero-content">
             <div class="hero-logo fade-in">
-                <img src="logo.svg" alt="DivineFlow" class="hero-logo-img">
+                <img src="divineflow-logo-1.png" alt="DivineFlow" class="hero-logo-img">
             </div>
-            <h1 class="fade-in">Healing Products. Delivered Instantly.</h1>
-            <p class="hero-subtitle fade-in delay-1">Sacred spiritual products, healing recordings, and guides — all available for instant download. No scheduling needed.</p>
+            <h1 class="fade-in">Healing Products.<br>Delivered Instantly.</h1>
+            <p class="hero-subtitle fade-in delay-1">Sacred spiritual products, healing recordings & guides. No scheduling needed.</p>
             
-            <!-- Automation Banner -->
             <div class="automation-banner fade-in delay-2">
                 <span class="auto-icon">✨</span>
-                <span class="auto-text"><strong>Fully Automated</strong> — Buy anytime, instant download. No sessions, no scheduling.</span>
+                <span><strong>Fully Automated</strong> — Buy anytime, instant download.</span>
             </div>
             
             <div class="hero-btns fade-in delay-3">
-                <a href="products.html" class="btn btn-primary btn-large">
-                    <span class="btn-text">Browse All Products</span>
+                <a href="products.html" class="btn btn-primary">
+                    <span>Browse Products</span>
                     <span class="btn-subtext">Shop Now →</span>
                 </a>
                 <a href="about.html" class="btn btn-outline">Learn More</a>
             </div>
         </div>
         
-        <!-- Background elements -->
         <div class="hero-bg">
             <div class="hero-circle hero-circle-1"></div>
             <div class="hero-circle hero-circle-2"></div>
+            <div class="hero-circle hero-circle-3"></div>
         </div>
     </section>
 
@@ -76,14 +80,13 @@
     <section class="section featured-products">
         <div class="container">
             <h2 class="section-title scroll-fade">🌟 Featured Products</h2>
-            <p class="section-subtitle scroll-fade">Our most popular healing products</p>
             
             <div class="featured-grid">
                 <div class="featured-card featured-main scroll-fade">
                     <div class="featured-badge">Best Seller</div>
                     <div class="featured-icon">🧘</div>
                     <h3>7-Day Healing Journey</h3>
-                    <p>Complete 7-day program with daily meditations, journal prompts, and healing exercises.</p>
+                    <p>Complete 7-day program with daily meditations, journal prompts & healing exercises.</p>
                     <p class="featured-price">£25 <span class="was">£35</span></p>
                     <a href="products.html#journey" class="btn btn-primary">View Details</a>
                 </div>
@@ -91,7 +94,7 @@
                 <div class="featured-card scroll-fade">
                     <div class="featured-icon">🔮</div>
                     <h3>Oracle Card Deck</h3>
-                    <p>44-card digital deck with detailed guidebook.</p>
+                    <p>44-card digital deck with guidebook.</p>
                     <p class="featured-price">£15</p>
                     <a href="products.html#oracle" class="btn btn-secondary">View</a>
                 </div>
@@ -99,7 +102,7 @@
                 <div class="featured-card scroll-fade">
                     <div class="featured-icon">🎵</div>
                     <h3>Healing Meditations</h3>
-                    <p>Guided audio for deep healing and relaxation.</p>
+                    <p>Guided audio for deep healing.</p>
                     <p class="featured-price">£8</p>
                     <a href="products.html#audio" class="btn btn-secondary">View</a>
                 </div>
@@ -116,22 +119,18 @@
                 <a href="products.html#ebooks" class="cat-preview-card scroll-fade">
                     <span class="cat-icon">📚</span>
                     <h3>Ebooks</h3>
-                    <p>Learn healing techniques</p>
                 </a>
                 <a href="products.html#audio" class="cat-preview-card scroll-fade">
                     <span class="cat-icon">🎵</span>
                     <h3>Audio</h3>
-                    <p>Meditations & healings</p>
                 </a>
                 <a href="products.html#cards" class="cat-preview-card scroll-fade">
                     <span class="cat-icon">🃏</span>
-                    <h3>Card Decks</h3>
-                    <p>Oracle & tarot</p>
+                    <h3>Cards</h3>
                 </a>
                 <a href="products.html#subscriptions" class="cat-preview-card scroll-fade">
                     <span class="cat-icon">🔄</span>
                     <h3>Subscriptions</h3>
-                    <p>Monthly content</p>
                 </a>
             </div>
         </div>
@@ -146,22 +145,22 @@
                 <div class="why-card scroll-fade">
                     <span class="why-icon">⚡</span>
                     <h3>Instant Access</h3>
-                    <p>Download immediately after purchase. No waiting, no scheduling.</p>
+                    <p>Download immediately after purchase.</p>
                 </div>
                 <div class="why-card scroll-fade">
                     <span class="why-icon">🔐</span>
                     <h3>Secure Checkout</h3>
-                    <p>Safe, encrypted payments. Your data is protected.</p>
+                    <p>Safe, encrypted payments.</p>
                 </div>
                 <div class="why-card scroll-fade">
                     <span class="why-icon">♾️</span>
                     <h3>Lifetime Access</h3>
-                    <p>Download as many times as you need. Keep forever.</p>
+                    <p>Download as many times as needed.</p>
                 </div>
                 <div class="why-card scroll-fade">
                     <span class="why-icon">💬</span>
                     <h3>Support</h3>
-                    <p>Questions? We're here to help within 24 hours.</p>
+                    <p>We're here to help within 24 hours.</p>
                 </div>
             </div>
         </div>
@@ -174,31 +173,37 @@
             
             <div class="testimonial-grid">
                 <div class="testimonial-card scroll-fade">
-                    <p class="testimonial-text">"The 7-Day Healing Journey transformed my daily routine. I feel more centered and peaceful."</p>
+                    <p>"The 7-Day Healing Journey transformed my daily routine."</p>
                     <p class="testimonial-author">— Sarah M.</p>
                 </div>
                 <div class="testimonial-card scroll-fade">
-                    <p class="testimonial-text">"Love the oracle cards! Beautiful design and so intuitive to use."</p>
+                    <p>"Love the oracle cards! Beautiful design and so intuitive."</p>
                     <p class="testimonial-author">— Emma L.</p>
                 </div>
                 <div class="testimonial-card scroll-fade">
-                    <p class="testimonial-text">"The meditation downloads have helped me sleep better than I have in years."</p>
+                    <p>"The meditation downloads helped me sleep better than years."</p>
                     <p class="testimonial-author">— James K.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="section newsletter">
+    <!-- Logo Gallery -->
+    <section class="section logo-gallery">
         <div class="container">
-            <div class="newsletter-box scroll-fade">
-                <h2>Stay Connected</h2>
-                <p>Get updates on new products, healing tips, and exclusive offers.</p>
-                <form class="newsletter-form" onsubmit="subscribe(event)">
-                    <input type="email" placeholder="Your email" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
+            <h2 class="section-title scroll-fade">Our Logos</h2>
+            <p class="section-subtitle scroll-fade">Choose your favorite</p>
+            
+            <div class="logos-grid">
+                <div class="logo-option scroll-fade">
+                    <img src="divineflow-logo-1.png" alt="Logo 1">
+                </div>
+                <div class="logo-option scroll-fade">
+                    <img src="divineflow-logo-2.png" alt="Logo 2">
+                </div>
+                <div class="logo-option scroll-fade">
+                    <img src="divineflow-logo-3.png" alt="Logo 3">
+                </div>
             </div>
         </div>
     </section>
@@ -207,7 +212,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="logo.svg" alt="DivineFlow" class="footer-logo">
+                    <img src="divineflow-logo-1.png" alt="DivineFlow" class="footer-logo">
                     <p>Sacred spiritual products for your healing journey.</p>
                 </div>
                 <div class="footer-col">
@@ -215,19 +220,16 @@
                     <a href="products.html">All Products</a>
                     <a href="products.html#ebooks">Ebooks</a>
                     <a href="products.html#audio">Audio</a>
-                    <a href="products.html#subscriptions">Subscriptions</a>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
                     <a href="about.html">About</a>
                     <a href="faq.html">FAQ</a>
-                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <a href="terms.html">Terms</a>
                     <a href="privacy.html">Privacy</a>
-                    <a href="refunds.html">Refund Policy</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -237,6 +239,31 @@
     </footer>
 
     <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeIcon();
+        }
+        
+        function updateThemeIcon() {
+            const icon = document.querySelector('.theme-icon');
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            icon.textContent = isDark ? '🌙' : '☀️';
+        }
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // Mobile menu
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+        
         // Scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -248,16 +275,8 @@
 
         document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
         
-        // Mobile menu
-        function toggleMobileMenu() {
-            document.getElementById('mobileNav').classList.toggle('active');
-        }
-        
-        // Newsletter
-        function subscribe(e) {
-            e.preventDefault();
-            alert('Thanks for subscribing! You'll receive updates from DivineFlow.');
-        }
+        // Initialize theme icon
+        updateThemeIcon();
     </script>
 </body>
 </html>
