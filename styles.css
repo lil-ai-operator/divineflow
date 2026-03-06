@@ -1530,3 +1530,123 @@ html {
     color: #ff9a9a;
     text-transform: uppercase;
 }
+
+/* LAYOUT FIXES */
+
+/* Hero Image Fix */
+.hero-logo-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+/* Section Padding Fix */
+.section {
+    padding: 80px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Container Fix */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Grid Fixes */
+.featured-grid,
+.why-grid,
+.testimonial-grid,
+.cat-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* Featured Main Fix */
+.featured-main {
+    grid-column: span 1;
+}
+
+/* Product Grid Fix */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+/* Testimonial Card Fix */
+.testimonial-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+    height: auto;
+}
+
+/* Hero Content Fix */
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Trust Badges Fix */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.trust-badge {
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+/* Hero Buttons Fix */
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* Fix for overflowing content */
+* {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Mobile Fixes */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 20px 15px;
+    }
+    
+    .hero h1 {
+        font-size: 32px !important;
+    }
+    
+    .section {
+        padding: 50px 15px;
+    }
+    
+    .trust-badges {
+        gap: 10px;
+    }
+    
+    .trust-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
