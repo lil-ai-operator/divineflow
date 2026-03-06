@@ -67,6 +67,16 @@
                 <span><strong>Instant Access</strong> — Download immediately. Start transforming today.</span>
             </div>
             
+            <!-- Countdown Timer -->
+            <div class="countdown-banner fade-in delay-3">
+                <span class="countdown-label">🔥 Offer ends in:</span>
+                <div class="countdown-timer" id="countdown">
+                    <div class="countdown-item"><span id="hours">04</span><small>Hours</small></div>
+                    <div class="countdown-item"><span id="minutes">32</span><small>Minutes</small></div>
+                    <div class="countdown-item"><span id="seconds">18</span><small>Seconds</small></div>
+                </div>
+            </div>
+            
             <!-- Urgency Banner -->
             <div class="urgency-banner fade-in delay-3">
                 🔥 <strong>247 people</strong> have started their healing journey this week
@@ -293,6 +303,33 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <h2 class="section-title scroll-fade">Frequently Asked Questions</h2>
+            <p class="section-subtitle scroll-fade">Everything you need to know</p>
+            
+            <div class="faq-container scroll-fade">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">How do I receive my purchase?</button>
+                    <div class="faq-answer">Instantly! After purchase, you'll receive an email with your download link.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">What formats are the products in?</button>
+                    <div class="faq-answer">Most products are PDFs and MP3s - playable on any device.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">What's your refund policy?</button>
+                    <div class="faq-answer">30-day money-back guarantee if not satisfied.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">Can I download multiple times?</button>
+                    <div class="faq-answer">Yes! Unlimited downloads within 30 days.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Newsletter -->
     <section class="section newsletter">
         <div class="container">
@@ -395,6 +432,32 @@
                 scrollBtn.style.pointerEvents = 'none';
             }
         });
+        
+        // FAQ Toggle
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            item.classList.toggle('active');
+        }
+        
+        // Countdown Timer
+        function startCountdown() {
+            // Set countdown to 4 hours from now
+            const endTime = new Date().getTime() + (4 * 60 * 60 * 1000);
+            
+            setInterval(function() {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+        startCountdown();
     </script>
 </body>
 </html>
