@@ -25,6 +25,14 @@
         <span class="theme-icon">🌙</span>
     </button>
 
+    <!-- Floating Contact Button -->
+    <a href="mailto:hello@divineflow.co.uk" class="floating-contact" aria-label="Contact us">
+        💬
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+
     <header class="header">
         <nav class="nav">
             <a href="index.html" class="logo">
@@ -51,12 +59,17 @@
             <div class="hero-logo fade-in">
                 <img src="hero-incredible.png" alt="DivineFlow" class="hero-logo-img">
             </div>
-            <h1 class="fade-in">Unlock Your Divine Potential.</h1>
-            <p class="hero-subtitle fade-in delay-1">Transform your life with sacred healing tools. Instant downloads. Forever yours. No waiting, no scheduling, just pure transformation.</p>
+            <h1 class="fade-in">Awaken Your Inner Divine</h1>
+            <p class="hero-subtitle fade-in delay-1">Sacred healing tools for your spiritual journey. Download instantly. Transform forever.</p>
             
             <div class="automation-banner fade-in delay-2">
                 <span class="auto-icon">✨</span>
                 <span><strong>Instant Access</strong> — Download immediately. Start transforming today.</span>
+            </div>
+            
+            <!-- Urgency Banner -->
+            <div class="urgency-banner fade-in delay-3">
+                🔥 <strong>247 people</strong> have started their healing journey this week
             </div>
             
             <div class="hero-btns fade-in delay-3">
@@ -342,6 +355,23 @@
         
         // Initialize theme icon
         updateThemeIcon();
+        
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Show/hide scroll button
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.querySelector('.scroll-top');
+            if (window.scrollY > 300) {
+                scrollBtn.style.opacity = '1';
+                scrollBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollBtn.style.opacity = '0';
+                scrollBtn.style.pointerEvents = 'none';
+            }
+        });
     </script>
 </body>
 </html>
