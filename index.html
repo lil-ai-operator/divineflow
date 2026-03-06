@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
 </head>
 <body>
     <!-- Floating Healing Orbs -->
@@ -21,169 +22,217 @@
 
     <header class="header">
         <nav class="nav">
-            <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 50 50" width="40" height="40">
-                    <defs>
-                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#5D4E6D"/>
-                            <stop offset="100%" style="stop-color:#8B7B9B"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="25" cy="25" r="22" fill="none" stroke="url(#logoGrad)" stroke-width="1.5"/>
-                    <path d="M18 32 L18 18 Q18 14 22 14 L28 14 Q32 14 32 18 L32 32" fill="none" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="25" cy="10" r="3" fill="url(#logoGrad)"/>
-                </svg>
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="DivineFlow" class="logo-img">
                 <span class="logo-text">DivineFlow</span>
-            </div>
+            </a>
             <ul class="nav-links">
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="cart.html" class="nav-cart">🛒 Cart</a></li>
             </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
         </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="cart.html">Cart</a>
+        </div>
     </header>
 
-    <section class="hero">
+    <section class="hero hero-home">
         <div class="hero-content">
-            <h1 class="fade-in">Healing Products. Delivered Automatically.</h1>
+            <div class="hero-logo fade-in">
+                <img src="logo.svg" alt="DivineFlow" class="hero-logo-img">
+            </div>
+            <h1 class="fade-in">Healing Products. Delivered Instantly.</h1>
             <p class="hero-subtitle fade-in delay-1">Sacred spiritual products, healing recordings, and guides — all available for instant download. No scheduling needed.</p>
             
             <!-- Automation Banner -->
             <div class="automation-banner fade-in delay-2">
                 <span class="auto-icon">✨</span>
-                <span class="auto-text"><strong>Fully Automated</strong> — Buy anytime, instant download. No sessions, no scheduling, no live contact needed.</span>
+                <span class="auto-text"><strong>Fully Automated</strong> — Buy anytime, instant download. No sessions, no scheduling.</span>
             </div>
             
-            <a href="#shop" class="btn btn-primary btn-large fade-in delay-3">
-                <span class="btn-text">Browse Products</span>
-                <span class="btn-subtext">Instant Access →</span>
-            </a>
+            <div class="hero-btns fade-in delay-3">
+                <a href="products.html" class="btn btn-primary btn-large">
+                    <span class="btn-text">Browse All Products</span>
+                    <span class="btn-subtext">Shop Now →</span>
+                </a>
+                <a href="about.html" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+        
+        <!-- Background elements -->
+        <div class="hero-bg">
+            <div class="hero-circle hero-circle-1"></div>
+            <div class="hero-circle hero-circle-2"></div>
         </div>
     </section>
 
-    <section id="shop" class="section shop">
+    <!-- Featured Products -->
+    <section class="section featured-products">
         <div class="container">
-            <h2 class="scroll-fade">🛒 Shop DivineFlow Products</h2>
-            <p class="scroll-fade">All products are digital — instant download after purchase. No waiting, no scheduling, no live sessions.</p>
+            <h2 class="section-title scroll-fade">🌟 Featured Products</h2>
+            <p class="section-subtitle scroll-fade">Our most popular healing products</p>
             
-            <div class="product-grid">
-                <div class="product-card scroll-fade">
-                    <div class="product-icon">🔮</div>
-                    <h3>Oracle Card PDF</h3>
-                    <p class="product-desc">Digital oracle card deck — print at home or view on device. 44 cards with meanings.</p>
-                    <p class="product-price">£15</p>
-                    <a href="#" class="btn btn-secondary">Buy Now</a>
-                </div>
-                
-                <div class="product-card scroll-fade">
-                    <div class="product-icon">📖</div>
-                    <h3>Beginner's Guide to Energy Healing</h3>
-                    <p class="product-desc">Comprehensive PDF ebook — learn the fundamentals of healing, chakra basics, and self-healing techniques.</p>
-                    <p class="product-price">£12</p>
-                    <a href="#" class="btn btn-secondary">Buy Now</a>
-                </div>
-                
-                <div class="product-card scroll-fade">
-                    <div class="product-icon">🎵</div>
-                    <h3>Healing Meditation MP3</h3>
-                    <p class="product-desc">30-minute guided healing meditation — download and listen anytime. MP3 format.</p>
-                    <p class="product-price">£8</p>
-                    <a href="#" class="btn btn-secondary">Buy Now</a>
-                </div>
-                
-                <div class="product-card scroll-fade">
-                    <div class="product-icon">💎</div>
-                    <h3>Crystal Grid PDF Templates</h3>
-                    <p class="product-desc">Printable crystal grid layouts — 10 different designs for healing and manifestation.</p>
-                    <p class="product-price">£10</p>
-                    <a href="#" class="btn btn-secondary">Buy Now</a>
-                </div>
-                
-                <div class="product-card scroll-fade">
-                    <div class="product-icon">🧘</div>
+            <div class="featured-grid">
+                <div class="featured-card featured-main scroll-fade">
+                    <div class="featured-badge">Best Seller</div>
+                    <div class="featured-icon">🧘</div>
                     <h3>7-Day Healing Journey</h3>
-                    <p class="product-desc">7 days of daily meditations, journal prompts, and healing exercises. PDF + MP3 bundle.</p>
-                    <p class="product-price">£25</p>
-                    <a href="#" class="btn btn-secondary">Buy Now</a>
+                    <p>Complete 7-day program with daily meditations, journal prompts, and healing exercises.</p>
+                    <p class="featured-price">£25 <span class="was">£35</span></p>
+                    <a href="products.html#journey" class="btn btn-primary">View Details</a>
                 </div>
                 
-                <div class="product-card scroll-fade">
-                    <div class="product-icon">🌙</div>
-                    <h3>Full Moon Ritual Pack</h3>
-                    <p class="product-desc">Complete ritual guide + guided audio for monthly moon healing. Recurring available.</p>
-                    <p class="product-price">£18</p>
-                    <a href="#" class="btn btn-secondary">Buy Now</a>
+                <div class="featured-card scroll-fade">
+                    <div class="featured-icon">🔮</div>
+                    <h3>Oracle Card Deck</h3>
+                    <p>44-card digital deck with detailed guidebook.</p>
+                    <p class="featured-price">£15</p>
+                    <a href="products.html#oracle" class="btn btn-secondary">View</a>
+                </div>
+                
+                <div class="featured-card scroll-fade">
+                    <div class="featured-icon">🎵</div>
+                    <h3>Healing Meditations</h3>
+                    <p>Guided audio for deep healing and relaxation.</p>
+                    <p class="featured-price">£8</p>
+                    <a href="products.html#audio" class="btn btn-secondary">View</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="products" class="section categories">
+    <!-- Categories -->
+    <section class="section categories-preview">
         <div class="container">
-            <h2 class="scroll-fade">Browse by Category</h2>
-            <div class="category-grid">
-                <div class="category-card scroll-fade">
+            <h2 class="section-title scroll-fade">Shop by Category</h2>
+            
+            <div class="cat-preview-grid">
+                <a href="products.html#ebooks" class="cat-preview-card scroll-fade">
                     <span class="cat-icon">📚</span>
-                    <h3>Ebooks & Guides</h3>
+                    <h3>Ebooks</h3>
                     <p>Learn healing techniques</p>
-                </div>
-                <div class="category-card scroll-fade">
+                </a>
+                <a href="products.html#audio" class="cat-preview-card scroll-fade">
                     <span class="cat-icon">🎵</span>
-                    <h3>Audio Downloads</h3>
+                    <h3>Audio</h3>
                     <p>Meditations & healings</p>
-                </div>
-                <div class="category-card scroll-fade">
+                </a>
+                <a href="products.html#cards" class="cat-preview-card scroll-fade">
                     <span class="cat-icon">🃏</span>
-                    <h3>Printable Cards</h3>
-                    <p>Oracle & tarot decks</p>
-                </div>
-                <div class="category-card scroll-fade">
+                    <h3>Card Decks</h3>
+                    <p>Oracle & tarot</p>
+                </a>
+                <a href="products.html#subscriptions" class="cat-preview-card scroll-fade">
                     <span class="cat-icon">🔄</span>
                     <h3>Subscriptions</h3>
-                    <p>Monthly healing content</p>
+                    <p>Monthly content</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why DivineFlow -->
+    <section class="section why-section">
+        <div class="container">
+            <h2 class="section-title scroll-fade">Why DivineFlow?</h2>
+            
+            <div class="why-grid">
+                <div class="why-card scroll-fade">
+                    <span class="why-icon">⚡</span>
+                    <h3>Instant Access</h3>
+                    <p>Download immediately after purchase. No waiting, no scheduling.</p>
+                </div>
+                <div class="why-card scroll-fade">
+                    <span class="why-icon">🔐</span>
+                    <h3>Secure Checkout</h3>
+                    <p>Safe, encrypted payments. Your data is protected.</p>
+                </div>
+                <div class="why-card scroll-fade">
+                    <span class="why-icon">♾️</span>
+                    <h3>Lifetime Access</h3>
+                    <p>Download as many times as you need. Keep forever.</p>
+                </div>
+                <div class="why-card scroll-fade">
+                    <span class="why-icon">💬</span>
+                    <h3>Support</h3>
+                    <p>Questions? We're here to help within 24 hours.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section about">
+    <!-- Testimonials -->
+    <section class="section testimonials">
         <div class="container">
-            <h2 class="scroll-fade">About DivineFlow</h2>
-            <p class="scroll-fade">DivineFlow creates sacred spiritual products for your healing journey — available 24/7, delivered instantly.</p>
-            <p class="scroll-fade">I believe healing tools should be accessible anytime, not just when a session can be scheduled. That's why I've created this collection of digital products — so you can heal, learn, and grow on your own schedule.</p>
-            <p class="highlight scroll-fade">All products are created with intention and delivered automatically. No scheduling required.</p>
+            <h2 class="section-title scroll-fade">What People Say</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card scroll-fade">
+                    <p class="testimonial-text">"The 7-Day Healing Journey transformed my daily routine. I feel more centered and peaceful."</p>
+                    <p class="testimonial-author">— Sarah M.</p>
+                </div>
+                <div class="testimonial-card scroll-fade">
+                    <p class="testimonial-text">"Love the oracle cards! Beautiful design and so intuitive to use."</p>
+                    <p class="testimonial-author">— Emma L.</p>
+                </div>
+                <div class="testimonial-card scroll-fade">
+                    <p class="testimonial-text">"The meditation downloads have helped me sleep better than I have in years."</p>
+                    <p class="testimonial-author">— James K.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="faq" class="section faq">
+    <!-- Newsletter -->
+    <section class="section newsletter">
         <div class="container">
-            <h2 class="scroll-fade">Questions?</h2>
-            <div class="faq-grid">
-                <div class="faq-item scroll-fade">
-                    <h3>How do I receive my purchase?</h3>
-                    <p>Instantly! After purchase, you'll receive an email with your download link. No waiting, no scheduling.</p>
-                </div>
-                <div class="faq-item scroll-fade">
-                    <h3>Do I need any special software?</h3>
-                    <p>Most products are PDFs (readable on any device) or MP3s (play on any music player). No special apps needed.</p>
-                </div>
-                <div class="faq-item scroll-fade">
-                    <h3>Can I get a refund?</h3>
-                    <p>Due to digital nature, refunds are within 14 days if the product hasn't been downloaded.</p>
-                </div>
-                <div class="faq-item scroll-fade">
-                    <h3>Do you offer subscriptions?</h3>
-                    <p>Yes! Monthly ritual packs and healing content subscriptions available. Cancel anytime.</p>
-                </div>
+            <div class="newsletter-box scroll-fade">
+                <h2>Stay Connected</h2>
+                <p>Get updates on new products, healing tips, and exclusive offers.</p>
+                <form class="newsletter-form" onsubmit="subscribe(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 DivineFlow — Spiritual Products & Healing Downloads</p>
-            <p class="footer-note">All products delivered automatically. No sessions required.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo.svg" alt="DivineFlow" class="footer-logo">
+                    <p>Sacred spiritual products for your healing journey.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <a href="products.html">All Products</a>
+                    <a href="products.html#ebooks">Ebooks</a>
+                    <a href="products.html#audio">Audio</a>
+                    <a href="products.html#subscriptions">Subscriptions</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="refunds.html">Refund Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 DivineFlow. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -198,6 +247,17 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
+        
+        // Mobile menu
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+        
+        // Newsletter
+        function subscribe(e) {
+            e.preventDefault();
+            alert('Thanks for subscribing! You'll receive updates from DivineFlow.');
+        }
     </script>
 </body>
 </html>

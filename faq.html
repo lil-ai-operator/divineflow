@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - DivineFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+<body>
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="DivineFlow" class="logo-img">
+                <span class="logo-text">DivineFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="cart.html" class="nav-cart">🛒 Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Frequently Asked Questions</h1>
+            <p class="fade-in delay-1">Everything you need to know</p>
+        </div>
+    </section>
+
+    <section class="section faq-section">
+        <div class="container">
+            <div class="faq-list">
+                <div class="faq-item scroll-fade">
+                    <h3>How do I receive my purchase?</h3>
+                    <p>Instantly! After completing your purchase, you'll receive an email with your download link. Click to download — no waiting, no scheduling.</p>
+                </div>
+
+                <div class="faq-item scroll-fade">
+                    <h3>What formats are the products in?</h3>
+                    <p>Most products are PDFs (readable on any device with a PDF reader) and MP3s (playable on any music player). Some products include both formats.</p>
+                </div>
+
+                <div class="faq-item scroll-fade">
+                    <h3>Can I download multiple times?</h3>
+                    <p>Yes! Your download link is valid for unlimited downloads within 30 days. Save your files to your preferred location.</p>
+                </div>
+
+                <div class="faq-item scroll-fade">
+                    <h3>What's your refund policy?</h3>
+                    <p>We offer refunds within 14 days if the product hasn't been downloaded. Contact us with your order details. For subscriptions, cancel anytime.</p>
+                </div>
+
+                <div class="faq-item scroll-fade">
+                    <h3>Do I need special software?</h3>
+                    <p>No! PDFs open in any browser or PDF reader. MP3s play on any music app. Super simple.</p>
+                </div>
+
+                <div class="faq-item scroll-fade">
+                    <h3>Can I sell or share these products?</h3>
+                    <p>These are for personal use only. You may not resell, redistribute, or share the files. Business licenses available — contact us.</p>
+                </div>
+
+                <div class="faq-item scroll-fade">
+                    <h3>How do subscriptions work?</h3>
+                    <p>Monthly subscribers receive new content on the 1st of each month. Cancel anytime from your account. You'll keep access to content downloaded while subscribed.</p>
+                </div>
+
+                <div class="faq-item scroll-fade">
+                    <h3>How can I contact you?</h3>
+                    <p>Email us at hello@divineflow.co.uk — we respond within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 DivineFlow — Spiritual Products & Healing Downloads</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

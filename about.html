@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - DivineFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+<body>
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="DivineFlow" class="logo-img">
+                <span class="logo-text">DivineFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="cart.html" class="nav-cart">🛒 Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header page-header-about">
+        <div class="container">
+            <h1 class="fade-in">About DivineFlow</h1>
+            <p class="fade-in delay-1">Our story and mission</p>
+        </div>
+    </section>
+
+    <section class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content scroll-fade">
+                    <h2>Healing Should Be Accessible</h2>
+                    <p>DivineFlow was created on a simple belief: healing tools should be available to everyone, anytime, anywhere.</p>
+                    <p>Traditional healing often requires scheduling, travel, and significant time commitment. We believe that's not necessary. With the right tools, anyone can begin their healing journey on their own schedule, in their own space.</p>
+                    <p>That's why we've created a collection of digital products — ebooks, meditations, oracle cards, and guides — that you can access instantly, use forever, and share with others.</p>
+                </div>
+                <div class="about-image scroll-fade">
+                    <img src="logo.svg" alt="DivineFlow Logo" class="about-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section values-section">
+        <div class="container">
+            <h2 class="section-title scroll-fade">Our Values</h2>
+            
+            <div class="values-grid">
+                <div class="value-card scroll-fade">
+                    <span class="value-icon">🌱</span>
+                    <h3>Accessibility</h3>
+                    <p>Healing should not require wealth or proximity. Our products reach anyone, anywhere.</p>
+                </div>
+                <div class="value-card scroll-fade">
+                    <span class="value-icon">✨</span>
+                    <h3>Intention</h3>
+                    <p>Every product is created with care, love, and positive intention.</p>
+                </div>
+                <div class="value-card scroll-fade">
+                    <span class="value-icon">🔄</span>
+                    <h3>Sustainability</h3>
+                    <p>Digital products mean no shipping, no physical waste. Better for you, better for Earth.</p>
+                </div>
+                <div class="value-card scroll-fade">
+                    <span class="value-icon">🤝</span>
+                    <h3>Community</h3>
+                    <p>We believe in supporting each other's healing journeys.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-box scroll-fade">
+                <h2>Ready to Begin?</h2>
+                <p>Explore our collection of healing products and start your journey today.</p>
+                <a href="products.html" class="btn btn-primary btn-large">Browse Products</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 DivineFlow — Spiritual Products & Healing Downloads</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

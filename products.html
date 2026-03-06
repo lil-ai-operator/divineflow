@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - DivineFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+<body>
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="DivineFlow" class="logo-img">
+                <span class="logo-text">DivineFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="cart.html" class="nav-cart">🛒 Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">All Products</h1>
+            <p class="fade-in delay-1">Digital healing products — instant download</p>
+        </div>
+    </section>
+
+    <section class="section products-section">
+        <div class="container">
+            <!-- Category Tabs -->
+            <div class="product-tabs scroll-fade">
+                <button class="tab active" onclick="filterProducts('all', this)">All</button>
+                <button class="tab" onclick="filterProducts('ebook', this)">Ebooks</button>
+                <button class="tab" onclick="filterProducts('audio', this)">Audio</button>
+                <button class="tab" onclick="filterProducts('cards', this)">Cards</button>
+                <button class="tab" onclick="filterProducts('subscription', this)">Subscriptions</button>
+            </div>
+
+            <!-- All Products Grid -->
+            <div class="products-grid">
+                <!-- Ebook Products -->
+                <div class="product-card scroll-fade" data-category="ebook" id="journey">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-img">🧘</div>
+                    <h3>7-Day Healing Journey</h3>
+                    <p class="product-desc">Complete program: 7 days of daily meditations, journal prompts, and healing exercises. PDF + MP3 bundle.</p>
+                    <div class="product-meta">
+                        <span class="product-format">PDF + MP3</span>
+                        <span class="product-pages">50+ pages</span>
+                    </div>
+                    <p class="product-price">£25 <span class="was">£35</span></p>
+                    <button class="btn btn-primary" onclick="addToCart('journey')">Add to Cart</button>
+                </div>
+
+                <div class="product-card scroll-fade" data-category="ebook">
+                    <div class="product-img">📖</div>
+                    <h3>Beginner's Guide to Energy Healing</h3>
+                    <p class="product-desc">Comprehensive ebook — chakra basics, self-healing techniques, and foundational knowledge.</p>
+                    <div class="product-meta">
+                        <span class="product-format">PDF</span>
+                        <span class="product-pages">80 pages</span>
+                    </div>
+                    <p class="product-price">£12</p>
+                    <button class="btn btn-secondary" onclick="addToCart('guide')">Add to Cart</button>
+                </div>
+
+                <div class="product-card scroll-fade" data-category="ebook">
+                    <div class="product-img">🌙</div>
+                    <h3>Moon Ritual Guide</h3>
+                    <p class="product-desc">Complete lunar healing rituals for new moon, full moon, and eclipses.</p>
+                    <div class="product-meta">
+                        <span class="product-format">PDF</span>
+                        <span class="product-pages">40 pages</span>
+                    </div>
+                    <p class="product-price">£10</p>
+                    <button class="btn btn-secondary" onclick="addToCart('moon')">Add to Cart</button>
+                </div>
+
+                <div class="product-card scroll-fade" data-category="ebook">
+                    <div class="product-img">💎</div>
+                    <h3>Crystal Healing Handbook</h3>
+                    <p class="product-desc">Learn crystal properties, layouts, and how to create powerful healing grids.</p>
+                    <div class="product-meta">
+                        <span class="product-format">PDF</span>
+                        <span class="product-pages">60 pages</span>
+                    </div>
+                    <p class="product-price">£14</p>
+                    <button class="btn btn-secondary" onclick="addToCart('crystals')">Add to Cart</button>
+                </div>
+
+                <!-- Audio Products -->
+                <div class="product-card scroll-fade" data-category="audio" id="audio">
+                    <div class="product-img">🎵</div>
+                    <h3>Deep Healing Meditation</h3>
+                    <p class="product-desc">30-minute guided meditation for deep relaxation and energetic clearing.</p>
+                    <div class="product-meta">
+                        <span class="product-format">MP3</span>
+                        <span class="product-pages">32 min</span>
+                    </div>
+                    <p class="product-price">£8</p>
+                    <button class="btn btn-secondary" onclick="addToCart('deep')">Add to Cart</button>
+                </div>
+
+                <div class="product-card scroll-fade" data-category="audio">
+                    <div class="product-img">😴</div>
+                    <h3>Sleep Healing Meditation</h3>
+                    <p class="product-desc">Gentle guided sleep meditation to heal while you rest.</p>
+                    <div class="product-meta">
+                        <span class="product-format">MP3</span>
+                        <span class="product-pages">45 min</span>
+                    </div>
+                    <p class="product-price">£8</p>
+                    <button class="btn btn-secondary" onclick="addToCart('sleep')">Add to Cart</button>
+                </div>
+
+                <div class="product-card scroll-fade" data-category="audio">
+                    <div class="product-img">🧠</div>
+                    <h3>Morning Activation</h3>
+                    <p class="product-desc">Start your day with intention. 15-minute morning healing ritual.</p>
+                    <div class="product-meta">
+                        <span class="product-format">MP3</span>
+                        <span class="product-pages">16 min</span>
+                    </div>
+                    <p class="product-price">£6</p>
+                    <button class="btn btn-secondary" onclick="addToCart('morning')">Add to Cart</button>
+                </div>
+
+                <!-- Card Products -->
+                <div class="product-card scroll-fade" data-category="cards" id="oracle">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-img">🔮</div>
+                    <h3>Oracle Card Deck PDF</h3>
+                    <p class="product-desc">44 beautifully designed oracle cards with detailed guidebook. Print or use digitally.</p>
+                    <div class="product-meta">
+                        <span class="product-format">PDF</span>
+                        <span class="product-pages">60 pages</span>
+                    </div>
+                    <p class="product-price">£15</p>
+                    <button class="btn btn-secondary" onclick="addToCart('oracle')">Add to Cart</button>
+                </div>
+
+                <div class="product-card scroll-fade" data-category="cards">
+                    <div class="product-img">🃏</div>
+                    <h3>Affirmation Cards</h3>
+                    <p class="product-desc">50 daily affirmation cards for healing and manifestation.</p>
+                    <div class="product-meta">
+                        <span class="product-format">PDF</span>
+                        <span class="product-pages">25 pages</span>
+                    </div>
+                    <p class="product-price">£10</p>
+                    <button class="btn btn-secondary" onclick="addToCart('affirm')">Add to Cart</button>
+                </div>
+
+                <div class="product-card scroll-fade" data-category="cards">
+                    <div class="product-img">💐</div>
+                    <h3>Manifestation Card Set</h3>
+                    <p class="product-desc">Create powerful intentions with this 30-card manifestation deck.</p>
+                    <div class="product-meta">
+                        <span class="product-format">PDF</span>
+                        <span class="product-pages">20 pages</span>
+                    </div>
+                    <p class="product-price">£12</p>
+                    <button class="btn btn-secondary" onclick="addToCart('manifest')">Add to Cart</button>
+                </div>
+
+                <!-- Subscription Products -->
+                <div class="product-card scroll-fade" data-category="subscription" id="subscriptions">
+                    <div class="product-badge">Monthly</div>
+                    <div class="product-img">🌕</div>
+                    <h3>Full Moon Ritual Club</h3>
+                    <p class="product-desc">New ritual pack every month + access to member library. Cancel anytime.</p>
+                    <div class="product-meta">
+                        <span class="product-format">Monthly</span>
+                        <span class="product-pages">New content monthly</span>
+                    </div>
+                    <p class="product-price">£9.99/mo</p>
+                    <button class="btn btn-primary" onclick="addToCart('moonclub')">Subscribe</button>
+                </div>
+
+                <div class="product-card scroll-fade" data-category="subscription">
+                    <div class="product-badge">Monthly</div>
+                    <div class="product-img">📥</div>
+                    <h3>Monthly Healing Drops</h3>
+                    <p class="product-desc">New meditation, journaling prompt, and healing exercise every month.</p>
+                    <div class="product-meta">
+                        <span class="product-format">Monthly</span>
+                        <span class="product-pages">New content monthly</span>
+                    </div>
+                    <p class="product-price">£5.99/mo</p>
+                    <button class="btn btn-secondary" onclick="addToCart('drops')">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 DivineFlow — Spiritual Products & Healing Downloads</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
+
+        // Filter products
+        function filterProducts(category, btn) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            
+            document.querySelectorAll('.product-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Add to cart (placeholder)
+        function addToCart(product) {
+            alert('Added to cart! (Payment integration coming soon)');
+        }
+    </script>
+</body>
+</html>
