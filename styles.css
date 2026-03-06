@@ -1220,3 +1220,12 @@ html {
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
 }
+
+/* Incredible Hero Image */
+.hero-logo-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    margin: 0 auto 30px;
+}
