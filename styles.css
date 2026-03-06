@@ -1356,3 +1356,75 @@ html {
 .urgency-banner strong {
     color: #ff6b6b;
 }
+
+/* As Seen In */
+.as-seen-in {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.as-seen-in p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.trust-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.trust-logo {
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+/* Video Testimonial */
+.video-testimonial {
+    background: var(--bg-secondary);
+}
+
+.video-placeholder {
+    background: linear-gradient(135deg, rgba(155, 123, 184, 0.3), rgba(45, 38, 65, 0.6));
+    border: 2px dashed var(--border-color);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.video-placeholder:hover {
+    border-color: var(--accent-primary);
+    transform: scale(1.02);
+}
+
+.video-icon {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    line-height: 80px;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.video-placeholder h3 {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.video-placeholder p {
+    color: var(--text-muted);
+}
