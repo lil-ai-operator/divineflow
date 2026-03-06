@@ -313,6 +313,66 @@ h1, h2, h3 {
     line-height: 1;
 }
 
+/* Launch Offer */
+.launch-offer {
+    background: linear-gradient(135deg, var(--lavender) 0%, var(--sky-blue) 100%);
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 3rem;
+    border: 2px solid var(--soft-purple);
+}
+
+.launch-badge {
+    display: inline-block;
+    background-color: var(--deep-purple);
+    color: var(--white);
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.launch-offer h3 {
+    font-size: 1.75rem;
+    color: var(--deep-purple);
+    margin-bottom: 0.5rem;
+}
+
+.launch-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--deep-purple);
+    margin-bottom: 1rem;
+}
+
+.launch-price .original-price {
+    text-decoration: line-through;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.save-badge {
+    background-color: #e74c3c;
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.launch-offer p {
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .pricing-card .duration {
     color: var(--text-light);
     font-size: 0.9rem;
@@ -364,6 +424,37 @@ h1, h2, h3 {
     color: var(--soft-purple);
     font-weight: 500;
     font-size: 0.9rem;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: var(--cream);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.faq-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(93, 78, 109, 0.08);
+}
+
+.faq-item h3 {
+    font-size: 1.25rem;
+    color: var(--deep-purple);
+    margin-bottom: 1rem;
+}
+
+.faq-item p {
+    color: var(--text-medium);
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
 /* Contact Section */

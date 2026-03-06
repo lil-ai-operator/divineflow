@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DivineFlow - Link in Bio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .linkinbio-hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--lavender) 50%, var(--soft-purple) 100%);
+            padding: 6rem 2rem 4rem;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--soft-purple), var(--calm-blue));
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(93, 78, 109, 0.2);
+        }
+        
+        .linkinbio-hero h1 {
+            font-size: 2rem;
+            color: var(--deep-purple);
+            margin-bottom: 0.5rem;
+        }
+        
+        .linkinbio-hero p {
+            color: var(--text-medium);
+            max-width: 400px;
+        }
+        
+        .links-section {
+            padding: 3rem 1.5rem;
+            background: linear-gradient(180deg, var(--off-white) 0%, var(--cream) 100%);
+            min-height: 40vh;
+        }
+        
+        .link-btn {
+            display: block;
+            background-color: var(--white);
+            color: var(--deep-purple);
+            text-decoration: none;
+            padding: 1.25rem 2rem;
+            margin: 0 auto 1rem;
+            max-width: 400px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(93, 78, 109, 0.1);
+            border: 2px solid var(--soft-purple);
+        }
+        
+        .link-btn:hover {
+            background-color: var(--deep-purple);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(93, 78, 109, 0.15);
+        }
+        
+        .link-btn.primary {
+            background-color: var(--deep-purple);
+            color: var(--white);
+        }
+        
+        .link-btn.primary:hover {
+            background-color: transparent;
+            color: var(--deep-purple);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .social-links a {
+            color: var(--deep-purple);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">DivineFlow</div>
+        </nav>
+    </header>
+
+    <section class="linkinbio-hero">
+        <div class="profile-img">🌿</div>
+        <h1>Clare</h1>
+        <p>Distance Healing Practitioner</p>
+    </section>
+
+    <section class="links-section">
+        <a href="index.html" class="link-btn primary">🌐 Full Website</a>
+        <a href="https://calendly.com/" class="link-btn">📅 Book a Session</a>
+        <a href="index.html#services" class="link-btn">💆 Services & Pricing</a>
+        <a href="index.html#about" class="link-btn">✨ About Me</a>
+        <a href="index.html#testimonials" class="link-btn">💬 Testimonials</a>
+        <a href="mailto:clare@divineflow.healing" class="link-btn">✉️ Get in Touch</a>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 DivineFlow. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
